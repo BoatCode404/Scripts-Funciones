@@ -1,0 +1,12 @@
+{
+    "user1": {
+        "nombre_usuario": "julian",
+        "password": "123",
+        "telefono_recuperacion": "3242501936"
+    },
+    "user2": {
+        "nombre_usuario": "santiago",
+        "password": "123",
+        "telefono_recuperacion": "2970303"
+    }
+}
