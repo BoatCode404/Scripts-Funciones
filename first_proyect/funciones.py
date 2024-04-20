@@ -16,13 +16,25 @@ def iniciar_sesion(users):
     passwordUsuario=input('Digite contraseña \n')
     limpar_pantalla()
     for nombre,datos in users.items():
-        if datos['nombre_usuario']==nombreUsuario and datos['password']==passwordUsuario:
-            animated_text('¡Bienvenido de nuevo! 🎉\n\n')
-            print('Has iniciado sesión correctamente. ¡Es genial tenerte de vuelta!😊\n')
-            animated_text('¿En qué podemos ayudarte hoy?\n\n')
-            animated_text('Estamos aquí para hacer tu experiencia lo más fácil y agradable posible.')
-            return
-    animated_text('❌NOMBRE DE USUARIO O CONTRASEÑA INCORRECTOS ❌')
+        while True:
+            if datos['nombre_usuario']==nombreUsuario and datos['password']==passwordUsuario:
+                animated_text('¡Bienvenido de nuevo! 🎉\n\n')
+                print('Has iniciado sesión correctamente. ¡Es genial tenerte de vuelta!😊\n')
+                animated_text('¿En qué podemos ayudarte hoy?\n\n')
+                animated_text('Estamos aquí para hacer tu experiencia lo más fácil y agradable posible.')
+                return
+            else:
+                respuesta=input('❌NOMBRE DE USUARIO O CONTRASEÑA INCORRECTOS ❌\n\n¿Desea intentar de nuevo S/N?\n\n')
+                if respuesta.lower()=='s':
+                    nombreUsuario=input('Digite Nombre de usuario \n')
+                    passwordUsuario=input('Digite contraseña \n')
+                else:
+                    respuesta_registro=input('¡Presion 1 si quieres registrarte!\nDe lo contrario presiona cualquier tecla para salir del sistema\n')
+                    if respuesta_registro=='1':
+                        registrarse(users)
+                    else:
+                        animated_text('¡Gracias por usar nuestro servicio! ¡Hasta luego! 👋😊')
+                        exit()
 def registrarse(users):
     limpar_pantalla()
 
