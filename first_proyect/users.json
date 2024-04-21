@@ -8,5 +8,15 @@
         "nombre_usuario": "santiago",
         "password": "123",
         "telefono_recuperacion": "2970303"
+    },
+    "user3": {
+        "nombre_usuario": "fernando",
+        "password": "1824",
+        "telefono_recuperacion": "2970303"
+    },
+    "user4": {
+        "nombre_usuario": "TATO",
+        "password": "123",
+        "telefono_recuperacion": "324"
     }
 }

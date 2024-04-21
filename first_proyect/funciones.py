@@ -8,39 +8,34 @@ def animated_text(text):
 def mostrar_opciones():
     animated_text('1) Iniciar Sesion\n')
     animated_text('2) Registrarse\n')
-def limpar_pantalla():
+def limpiar_pantalla():
     os.system('cls'if os.name=='nt'else 'clear')
 def iniciar_sesion(users):
-    limpar_pantalla()
-    nombreUsuario=input('Digite Nombre de usuario \n')
-    passwordUsuario=input('Digite contraseña \n')
-    limpar_pantalla()
-    for nombre,datos in users.items():
-        while True:
-            if datos['nombre_usuario']==nombreUsuario and datos['password']==passwordUsuario:
-                animated_text('¡Bienvenido de nuevo! 🎉\n\n')
+    while True:
+        nombreUsuario = input('Digite Nombre de usuario: \n ')
+        passwordUsuario = input('Digite contraseña: \n ')
+        limpiar_pantalla()
+        for nombre, datos in users.items():
+            if datos['nombre_usuario'] == nombreUsuario and datos['password'] == passwordUsuario:
+                animated_text(f'¡Bienvenido de nuevo! 🎉 @{nombreUsuario}\n\n') 
                 print('Has iniciado sesión correctamente. ¡Es genial tenerte de vuelta!😊\n')
-                animated_text('¿En qué podemos ayudarte hoy?\n\n')
-                animated_text('Estamos aquí para hacer tu experiencia lo más fácil y agradable posible.')
+                animated_text('¿En qué podemos ayudarte hoy? 👨‍💻🛠️\n\n')
+                animated_text('Estamos aquí para hacer tu experiencia lo más fácil y agradable posible. 😊👍')
                 return
+        respuesta=input('❌NOMBRE DE USUARIO O CONTRASEÑA INCORRECTOS ❌\n\n¿Desea intentar de nuevo S/N? ')
+        if respuesta.lower()!='s':
+            respuesta_registro=input('¡Presiona 1 si quieres registrarte! \nDe lo contrario presiona cualquier tecla para salir del sistema\n')
+            if respuesta_registro=='1':
+                registrarse(users)
             else:
-                respuesta=input('❌NOMBRE DE USUARIO O CONTRASEÑA INCORRECTOS ❌\n\n¿Desea intentar de nuevo S/N?\n\n')
-                if respuesta.lower()=='s':
-                    nombreUsuario=input('Digite Nombre de usuario \n')
-                    passwordUsuario=input('Digite contraseña \n')
-                else:
-                    respuesta_registro=input('¡Presion 1 si quieres registrarte!\nDe lo contrario presiona cualquier tecla para salir del sistema\n')
-                    if respuesta_registro=='1':
-                        registrarse(users)
-                    else:
-                        animated_text('¡Gracias por usar nuestro servicio! ¡Hasta luego! 👋😊')
-                        exit()
+                animated_text('¡Gracias por usar nuestro servicio! ¡Hasta luego! 👋😊')
+                exit()
 def registrarse(users):
-    limpar_pantalla()
+    limpiar_pantalla()
 
     registroUsuario,registrocontraseña,telefono=input("Digite su usuario \n"),input('Digite su contraseña\n'),input('Digite telefono de recuperacion: \n')
 
-    limpar_pantalla()
+    limpiar_pantalla()
 
     nuevo_usuario={}
     nuevo_usuario['nombre_usuario']=registroUsuario
@@ -75,4 +70,3 @@ def main():
         animated_text('Opcion no valida')
 if __name__ == '__main__':
     main()
-    
