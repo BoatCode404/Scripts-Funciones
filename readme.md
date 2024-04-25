@@ -14,7 +14,7 @@ En este repositorio, encontrarás una colección de funciones de Python que te a
 
 Además de las funciones básicas, también tenemos una variedad de ejercicios prácticos que te ayudarán a afianzar tus conocimientos. ¡Ponte a prueba y mejora tus habilidades de programación con nuestros desafíos!
 
-![Ejercicios en clase](https://media.giphy.com/media/xT1R9Er8vbo1f3pJSs/giphy.gif)
+![Ejercicios en clase](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
 
 ## Proyectos personales en Python 💡
 
