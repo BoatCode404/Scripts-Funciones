@@ -50,7 +50,7 @@ def registrarse(users):
         
     animated_text('¡Registro completado con éxito! 🌟🎉\n\n')
     print('¡Enhorabuena! Ahora formas parte de nuestra comunidad. 😊👏\n\n')
-    animated_text('¡Bienvenido a bordo! Estamos emocionados de tenerte con nosotros. 🚀✨')
+    animated_text('¡Bienvenidoo a bordo! Estamos emocionados de tenerte con nosotros. 🚀✨')
 def main():
    
    with open('users.json','r') as archivo_json:
@@ -70,5 +70,4 @@ def main():
         animated_text('Opcion no valida')
 if __name__ == '__main__':
     main()
-
 
