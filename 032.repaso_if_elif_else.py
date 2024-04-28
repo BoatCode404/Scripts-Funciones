@@ -10,3 +10,4 @@ elif height<137 and credits>=10:
     print('No Eres lo suficiente alto para pasar')
 else:
     print("No cumple ningun requisito")
+    

@@ -23,3 +23,4 @@ elif planet_number == 7:
     print(destination_weight)
 else:
   print('Invalid planet number')
+  
