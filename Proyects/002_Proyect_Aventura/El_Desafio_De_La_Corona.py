@@ -94,18 +94,19 @@ Selecciona tu personaje y adéntrate en el mundo de El Rescate de la Princesa.
 
 ¡Que la suerte esté de tu lado, héroe @{name_player}
 '''
-print(bienvenida,'\n')
+print("\n\n")
+animated_text(bienvenida)
 tecla=input('<-------------PRESIONA UNA TECLA PARA CONTINUAR----------------> ')
 os.system('cls')
 
 '===== Seleccionar un personaje ============'
 
-print(f'Hola de nuevo  @{name_player}\nRecuerda que basta con escribir el nombre del personaje para elegirlo\n\n')
-print('Guerrero\nNombre: Raoul Espada de la Aurora\n')
+animated_text(f'Hola de nuevo  @{name_player}\nRecuerda que basta con escribir el nombre del personaje para elegirlo\n\n')
+animated_text('Guerrero\nNombre: Raoul Espada de la Aurora\n')
 print('Descripción: Raoul es un guerrero audaz y decidido, conocido por su valentía en el campo de batalla. Con su imponente espada de la aurora, Raoul protege a los indefensos y lucha por la justicia. Su fuerza y determinación son inigualables, y siempre está listo para enfrentarse a cualquier desafío que se le presente.\n\n\n')
-print('Arquero\nNombre: Lila Flecha Veloz\n')
+animated_text('Arquero\nNombre: Lila Flecha Veloz\n')
 print('Descripción: Lila es una arquera ágil y astuta, cuya destreza con el arco es incomparable. Con su rápida puntería y sus flechas certeras, Lila es capaz de derrotar a sus enemigos desde la distancia antes de que se den cuenta de su presencia. Sigilosa y decidida, es una aliada indispensable en cualquier batalla.\n\n\n')
-print('Mago\nNombre\nOrion Hechicero del Cielo\n')
+animated_text('Mago\nNombre\nOrion Hechicero del Cielo\n')
 print('Descripción:Orion es un poderoso mago cuyo dominio de la magia es legendario.Con su bastón mágico en mano, es capaz de controlar los elementos a su antojo y desatar poderosos hechizos sobre sus enemigos.Sabio y astuto,Orion utiliza su vasto conocimiento de la magia para proteger a sus compañeros y derrotar a cualquier amenaza que se interponga en su camino.\n\n\n')
 
 '=========Control de Flujo con While ============='
@@ -361,9 +362,8 @@ Finalmente, llegas al castillo justo a tiempo para salvar a la princesa de las g
 
 
 os.system('cls')
-print(caminos)
+pri(caminos)
 
-'<---------CAMINO DEL BOSQUE---------->'
 respuesta_caminos=input('\n\nEscriba El nombre del camino aqui:').lower()
 while respuesta_caminos!='bosque' and respuesta_caminos!='lago' and respuesta_caminos!='selva':
     respuesta_caminos=input('\n\nRecuerda escribir Bosque,Lago o Selva\nEscriba El nombre del camino aqui:').lower()
@@ -375,7 +375,7 @@ if respuesta_caminos=='bosque':
     puntos_vida_guardian=120
     dado_guardian_bosque=random.randint(1,6)
     dado_jugador_bosque=random.randint(1,6)
-    print(minijuegos_dados)
+    animated_text(minijuegos_dados)
     while puntos_vida_guardian>50 and puntos_vida>50:
         dado_guardian_bosque=random.randint(1,6)
         dado_jugador_bosque=random.randint(1,6)
@@ -396,7 +396,7 @@ if respuesta_caminos=='bosque':
             print(f"\nLos dados muestran numeros iguales\n\n!Es un empate!\nLa vida de @{name_player} se mantiene en : {puntos_vida}\nLa vida del Guardian del Bosque se mantiene en : {puntos_vida_guardian} ")
     os.system('cls')
     print(f'La vida de {name_player} es : {puntos_vida}\nLa vida del Guardian del Bosque es : {puntos_vida_guardian}\n\n')
-    print(f'\n{minijuegos_adivinazas}')
+    animated_text(f'\n{minijuegos_adivinazas}')
     numero_secreto=2
     dado_guardian_bosque=random.randint(1,4)
     dado_jugador_bosque=random.randint(1,4)
@@ -427,7 +427,7 @@ if respuesta_caminos=='bosque':
             print(f'\n\nNinguno Adivino el numero\nAsi que {name_player} & El Guardian del Bosque no atacan\n\nLa vida de @{name_player} se mantiene en : {puntos_vida}\nLa vida del Guardian del Bosque se mantiene en : {puntos_vida_guardian} ')
     os.system('cls')
     print(bosque_tenebroso_parte2)
-    print("\n\n\n\n")
+    os.system('cls')
     print(mensaje_despesida)
 elif respuesta_caminos=='lago':
     os.system('cls')
@@ -437,7 +437,7 @@ elif respuesta_caminos=='lago':
     puntos_vida_azote=150
     dado_azote_pantano=random.randint(4,9)
     dado_jugador_pantano=random.randint(4,9)
-    print(minijuegos_dados)
+    animated_text(minijuegos_dados)
     while puntos_vida_azote>50 and puntos_vida>50:
         dado_azote_pantano=random.randint(4,9)
         dado_jugador_pantano=random.randint(4,9)
@@ -458,7 +458,7 @@ elif respuesta_caminos=='lago':
             print(f"\nLos dados muestran numeros iguales\n\n!Es un empate!\nLa vida de @{name_player} se mantiene en : {puntos_vida}\nLa vida del Azote del Pantano se mantiene en : {puntos_vida_azote} ")
     os.system('cls')
     print(f'La vida de {name_player} es : {puntos_vida}\nLa vida del Azote del Pantano es : {puntos_vida_azote}\n\n')
-    print(f'\n{minijuegos_adivinazas}')
+    animated_text(f'\n{minijuegos_adivinazas}')
     numero_secreto=14
     dado_azote_pantano=random.randint(9,14)
     dado_jugador_pantano=random.randint(9,14)
@@ -489,7 +489,7 @@ elif respuesta_caminos=='lago':
             print(f'\n\nNinguno Adivino el numero\nAsi que {name_player} & El Azote del Pantano no atacan\n\nLa vida de @{name_player} se mantiene en : {puntos_vida}\nLa vida del Azote del Pantano se mantiene en : {puntos_vida_azote} ')
     os.system('cls')
     print(mensaje2_lago)
-    print("\n\n\n\n")
+    os.system('cls')
     print(mensaje_despesida)
 elif respuesta_caminos=='selva':
     os.system('cls')
@@ -499,7 +499,7 @@ elif respuesta_caminos=='selva':
     puntos_vida_vigia=115
     dado_vigia_selva=random.randint(1,6)
     dado_jugador_selva=random.randint(1,6)
-    print(minijuegos_dados)
+    animated_text(minijuegos_dados)
     while puntos_vida_vigia>50 and puntos_vida>50:
         dado_vigia_selva=random.randint(1,6)
         dado_jugador_selva=random.randint(1,6)
@@ -520,7 +520,7 @@ elif respuesta_caminos=='selva':
             print(f"\nLos dados muestran numeros iguales\n\n!Es un empate!\nLa vida de @{name_player} se mantiene en : {puntos_vida}\nLa vida del Vigia de la Selva se mantiene en : {puntos_vida_vigia} ")
     os.system('cls')
     print(f'La vida de {name_player} es : {puntos_vida}\nLa vida del Vigia de la Selva es : {puntos_vida_vigia}\n\n')
-    print(f'\n{minijuegos_adivinazas}')
+    animated_text(f'\n{minijuegos_adivinazas}')
     numero_secreto=24
     dado_vigia_selva=random.randint(18,24)
     dado_jugador_selva=random.randint(18,24)
