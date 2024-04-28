@@ -123,7 +123,7 @@ bosque_tenebroso_parte2=''''
     '''''
 
 minijuegos_dados='Para vencer este Boos tendras que enfrentarte a un desafio consiste en tirar un dado y sacar un numero mas alto que el enemigo , si sacas el numero mas alto le quitaras un 15 porciento de su vida dependiendo de su armadura , lo mismo te pasara a ti si tu oponente saca un numero mas alto suerte  '
-minijuegos_adivinazas='Excelente has pasado la primera prueba y lo tenes bajo las cuerdas o el a ti pero todavia hay fe si ese es el caso ahora rematemoslo pero primero un juego de adivinazas si adivinas el numero primero que tu oponente le quitaras 25% de su vida '
+minijuegos_adivinazas='Excelente has pasado la primera prueba y lo tenes bajo las cuerdas o el a ti pero todavia hay fe si ese es el caso ahora rematemoslo pero primero un juego de adivinazas si adivinas el numero primero que tu oponente le quitaras 50% de su vida '
 print(caminos)
 
 '<---------CAMINO DEL BOSQUE---------->'
@@ -143,12 +143,12 @@ if respuesta_caminos=='bosque':
         os.system('cls')
         print(f'El dado callo en {dado_jugador_bosque} & El Guardian de bosque saco :{dado_guardian_bosque}')
         if dado_jugador_bosque>dado_guardian_bosque:
-            golpe=puntos_vida_guardian*15/100
+            golpe=puntos_vida_guardian*15//100
             vida_final=puntos_vida_guardian-golpe
             puntos_vida_guardian=vida_final
             print(f'\n\nExcelente lo has golpeado y esta es su vida {puntos_vida_guardian}')
         elif dado_guardian_bosque>dado_jugador_bosque:
-            golpe=puntos_vida*15/100
+            golpe=puntos_vida*15//100
             vida_final=puntos_vida-golpe
             puntos_vida=vida_final
             print(f'\nEl Guardian del bosque te ha  golpeado y esta es tu vida {puntos_vida}')
@@ -159,23 +159,24 @@ if respuesta_caminos=='bosque':
     dado_guardian_bosque=random.randint(1,50)
     dado_jugador_bosque=random.randint(1,50)
     print(puntos_vida_guardian)
-    while puntos_vida_guardian>0:
+    while puntos_vida_guardian>1:
         numero_secreto=7
         dado_guardian_bosque=random.randint(1,7)
         dado_jugador_bosque=random.randint(1,7)
         tirada_dados_bosque=input("\n\nPRESIONE UNA TECLA PARA TIRAR DADOS: \n")
+        
         print(f'Usted saco esto {dado_jugador_bosque} y el guardian {dado_guardian_bosque}')
         if dado_jugador_bosque==7:
-            golpe=puntos_vida_guardian*25/100
+            golpe=puntos_vida_guardian*50//100
             vida_final=puntos_vida_guardian-golpe
             puntos_vida_guardian=vida_final
             print(f'\nExcelente lo has golpeado y esta es su vida {puntos_vida_guardian}')
         elif dado_guardian_bosque==7:
-            golpe=puntos_vida*25/100
+            golpe=puntos_vida*50//100
             vida_final=puntos_vida-golpe
             puntos_vida=vida_final
             print(f'\nEl Guardian del bosque te ha  golpeado y esta es tu vida {puntos_vida}')
-        elif puntos_vida==0:
+        elif puntos_vida==1:
             print("GAME OVER")
             exit()
     print(bosque_tenebroso_parte2)
