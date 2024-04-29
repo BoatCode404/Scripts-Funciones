@@ -362,7 +362,7 @@ Finalmente, llegas al castillo justo a tiempo para salvar a la princesa de las g
 
 
 os.system('cls')
-pri(caminos)
+print(caminos)
 
 respuesta_caminos=input('\n\nEscriba El nombre del camino aqui:').lower()
 while respuesta_caminos!='bosque' and respuesta_caminos!='lago' and respuesta_caminos!='selva':
