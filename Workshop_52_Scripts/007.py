@@ -31,7 +31,7 @@ cantidadFrases=int(input("Cuantas frases vas ingresar : "))
 for i in range(cantidadFrases):
     frase=input("Escriba una frase para contarla : ").lower()
     contador+=1
-print(f"Se ingresaron un tatal de {contador} frases")
+print(f"Se ingresaron un total de {contador} frases")
 
 
 
