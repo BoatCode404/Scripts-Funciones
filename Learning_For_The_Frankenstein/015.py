@@ -9,21 +9,36 @@ Monto Bonificación
 20000 a más  8
 '''
 import os,time
+index=1
+lista=[]
+nombres=[]
 def animated_text(text):
     for c in text:
         print(c,end='',flush=True)
         time.sleep(0.1)
-cantidadVendedores=int(input("¿Cuantos registros vas hacer?: "))
-for i in range(cantidadVendedores):
-    animated_text(f"Cual es el nombre del vendedor {i+1}: ")
-    nombre=input()
-    venta=int(input(f" ¿ Cual es la venta alcanzada de {nombre} este mes ?:  \n"))
-    if venta >=20000:
-        animated_text("Su bonificacion es de 8 ")
-    elif venta >=5000 and venta<20000:
-        animated_text("Su bonificacion es de 5 ")
-    elif venta >=1000 and venta<5000:
-        animated_text("Su bonificacion es de 3 ")
+def tipoBoni(v):
+    if v >=20000:
+        return("Su bonificacion es de 8 ")
+    elif v >=5000 and v<20000:
+        return("Su bonificacion es de 5 ")
+    elif v >=1000 and v<5000:
+        return("Su bonificacion es de 3 ")
     else:
-        animated_text("Su bonificacion es de 0 \n\n")
-
+        return("Su bonificacion es de 0")
+while True:
+    os.system('cls')
+    animated_text(f"Cual es el nombre del vendedor {index}: ")
+    nombre=input()
+    nombres.append(nombre)
+    venta=int(input(f"¿Cual es la venta alcanzada de {nombre} este mes ?: "))
+    lista.append(venta)
+    index+=1
+    print("¿Quires agregar otro registro? Si ò No")
+    animated_text("Responde Aca:")
+    r=input().lower()
+    if r!='si':
+        break
+os.system('cls')
+bonificacion=list(map(tipoBoni,lista))
+for i ,(nombre,venta,bonificacion) in enumerate(zip(nombres,lista,bonificacion),1):
+        print(f'registro #{i}\nVendedor: {nombre}\nVenta Del mes: {venta}\n{bonificacion}\n\n')

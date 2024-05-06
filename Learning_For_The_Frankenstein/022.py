@@ -22,12 +22,12 @@ def clasificacionAuto(v):
 while True:
     os.system('cls')
     velocidad=float(input("¿Cual es la velocidad del vehiculo?: "))
-    tipo=clasificacionAuto(velocidad)
-    lista.append((velocidad,tipo))
+    lista.append((velocidad))
     animated_text("¿Quieres Ingresar mas velocidades? Si Ò No ")
     r=input("Responda Aca:")
     if r!='si':
         break
 os.system('cls')
-for i ,(velocidad,tipo) in enumerate(lista,1):
-    print(f'El Registro #{i} tiene una velocidad de {velocidad} y es un {tipo}\n')
+tipos=list(map(clasificacionAuto,lista))
+for i ,tipo in enumerate(tipos,1):
+    print(f'El Registro #{i} tiene una velocidad de {velocidad} es un {tipo}\n')
