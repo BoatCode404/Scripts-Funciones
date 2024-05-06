@@ -3,24 +3,37 @@ Deficiente (menos de 50)
 Aprobado (50-64)
 Notable (65-84)
 Sobresaliente (85-100)'''
-import time
+import time,os
 def animated_text(text):
     for c in text:
         print(c,end='',flush=True)
         time.sleep(0.1)
-cantidadNotas=int(input("¿Cuantas notas vas a ingresar?: "))
-for i in range(cantidadNotas):
-    nombre=input(f"¿Cual es el nombre del estudiante {i+1}?:  ")
-    nota=int(input(f"Escriba la {i+1} nota del estudiante {nombre}: "))
-    if nota>=85 and nota<101:
-        animated_text("La nota es Sobresaliente\n\n")
-    elif nota>=65 and nota<85:
-        animated_text("La nota es Notable\n\n")
-    elif nota >=50 and nota<65:
-        animated_text("La nota es Aprobado\n\n")
+def clasifiacionNotas(n):
+    if n>=85 and n<101:
+        return("Es Sobresaliente")
+    elif n>=65 and n<85:
+        return("es Notable")
+    elif n >=50 and n<65:
+        return("Es Aprobado")
     else:
-        animated_text("La nota es Deficiente\n\n")
-
+        return("Es Deficiente")
+lista=[]
+index=1
+while True:
+    os.system('cls')
+    nombre=input(f"¿Cual es el nombre del estudiante {index} ? :  ")
+    try:
+        nota=float(input(f"Cual es la nota de {nombre} : "))
+        tipoNota=clasifiacionNotas(nota)
+        lista.append(((nombre,nota,tipoNota)))
+        r=input("¿Quieres registrar mas estudiantes? Si ò No:  ")
+        if r!='si':
+            break
+    except ValueError:
+        animated_text("❌ Error ❌ : Se esperaba una numero como nota")
+os.system('cls')
+for i ,(nombre,nota,tipoNota) in enumerate(lista,1):
+    print(f"El registro#{i}\nPertenece Al estudiante {nombre}\nSu nota : {nota}\nLa calificacion {tipoNota}\n")
 
 
 
