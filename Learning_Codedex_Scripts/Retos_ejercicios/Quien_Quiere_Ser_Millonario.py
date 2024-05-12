@@ -2,6 +2,9 @@ import os,time
 
 botin = 0
 
+def finality():
+    global botin
+    animated_text(f"\n\n\n\n\n Has llegado al final del juego\nGracias por participar en ¿Quién quiere ser millonario?\nEsperamos que hayas disfrutado y que hayas aprendido algo nuevo.\n\nTu premio es de ${botin} Dolares\n\n¡Hasta la próxima vez!")
 def welcome():
     os.system('cls')
     mensaje="¡Bienvenido a ¿Quién quiere ser millonario?!\n\n"
@@ -20,61 +23,85 @@ def questions():
     p1=(input("\nEscriba la opcion Aca: ")).lower()
     if p1=="b":
         botin+=1000
-        opcion="La Respuesta es ¡Correcta!"
+        opcion="\nLa Respuesta es ¡Correcta!"
     else:
         opcion="Opcion Incorrecta"
+        print("\n\n")
+        print(opcion)
+        finality()
+        exit()
     print(opcion)
-    input("<---- Segunda Pregunta (ENTER) ---->")
+    input("\n\n\n<---- Segunda Pregunta (ENTER) ---->")
     os.system('cls')
     animated_text("La segunda pregunta se jugara  por $2,000. ¡Buena suerte!\n\n")
     animated_text("¿Cuál es el río más largo del mundo?\na)Nilo\nb)Amazonas\nc)Yangtsé\nd)Misisipi")
     p2=(input("\nEscriba la opcion Aca: ")).lower()
     if p2=="b":
         botin+=2000
-        opcion="La Respuesta es ¡Correcta!"
+        opcion="\nLa Respuesta es ¡Correcta!"
     else:
         opcion="Opcion Incorrecta"
+        print("\n\n")
+        print(opcion)
+        finality()
+        exit()
     print(opcion)
-    input("<---- Tercera Pregunta (ENTER) ---->")
+    input("\n\n\n<---- Tercera Pregunta (ENTER) ---->")
     os.system('cls')
     animated_text("La tercer pregunta se jugara  por $5,000. ¡Buena suerte!\n\n")
     animated_text("¿Quién escribió Don Quijote de la Mancha?\na)Miguel de Cervantes\nb)Gabriel García Márquez\nc)William Shakespeare\nd)Pablo Neruda")
     p3=(input("\nEscriba la opcion Aca: ")).lower()
     if p3=="a":
         botin+=5000
-        opcion="La Respuesta es ¡Correcta!"
+        opcion="\nLa Respuesta es ¡Correcta!"
     else:
         opcion="Opcion Incorrecta"
+        print("\n\n")
+        print(opcion)
+        finality()
+        exit()
     print(opcion)
     print("\n\n¿Quieres seguir jugando o te quieres retirar?\na)Si\nb)No")
     retiro=input("Responda Aca: ").lower()
     os.system('cls')
     if retiro=="a":
         opcion=animated_text(f"Gracias por jugar te llevas un botin de {botin} ")
+        exit()
     else:
         animated_text("La cuarta pregunta se jugara  por $10,000. ¡Buena suerte!\n\n")
         animated_text("¿Cuál es el símbolo químico del oro?\na)Au\nb)Ag\nc)Fe\nd)Cu")
     p4=(input("\nEscriba la opcion Aca: ")).lower()
     if p4=="a":
         botin+=10000
-        opcion="La Respuesta es ¡Correcta!"
+        opcion="\nLa Respuesta es ¡Correcta!"
     else:
         opcion=("Opcion Incorrecta")
+        print("\n\n")
+        print(opcion)
+        finality()
+        exit()
     print(opcion)
     print("\n\n¿Quieres seguir jugando o te quieres retirar?\na)Si\nb)No")
     retiro=input("Responda Aca: ").lower()
     os.system('cls')
     if retiro=="a":
         opcion=animated_text(f"Gracias por jugar te llevas un botin de {botin} ")
+        exit()
     else:
         animated_text("La quinta pregunta se jugara  por $20,000. ¡Buena suerte!\n\n")
         animated_text("¿En qué año llegó Cristóbal Colón a América?\na)1492\nb)1500\nc)1520\nd)1450")
     p4=(input("\nEscriba la opcion Aca: ")).lower()
     if p4=="a":
         botin+=20000
-        opcion="La Respuesta es ¡Correcta!"
+        opcion="\nLa Respuesta es ¡Correcta!"
     else:
         opcion="Opcion Incorrecta"
+        print("\n\n")
+        print(opcion)
+        finality()
+        exit()
     print(opcion)
 
 welcome()
+questions()
+finality()
