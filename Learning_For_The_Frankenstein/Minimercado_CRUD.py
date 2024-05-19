@@ -4,6 +4,7 @@ import time as t
 listaNombreProducto=[]
 listaPrecioProducto=[]
 listaCantidadProducto=[]
+
 def prsionaTecla():
     animated_text("\nPresiona una tecla para continuar")
     input()
