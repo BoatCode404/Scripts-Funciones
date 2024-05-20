@@ -1,7 +1,7 @@
 import pyowm
 
 def obtener_clima(ciudad):
-    api_key = 'f8ad37003cead5a8099b5896eb929e97'  # Reemplaza 'TU_API_KEY' con tu propia clave de API
+    api_key =   # Reemplaza 'TU_API_KEY' con tu propia clave de API
     owm = pyowm.OWM(api_key)
     try:
         observacion = owm.weather_manager().weather_at_place(ciudad)
