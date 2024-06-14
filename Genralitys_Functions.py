@@ -8,10 +8,12 @@ def fahrenheit_to_celsius(fahrenheit):
 def calcular_IMC(p,a):
     IMC={p/a**2}
     return IMC
+
 # Calcular la hipotenusa de un triangulo 📐
 def hipotenusa(l1,l2):
     h=(l1**2+l2**2)**0.5
     return h
+
 # Conversion de monedas a dolares 💵
 def conversion_monedas_a_USD(m1,m2,m3):
     USD_colombia=0.00026
@@ -19,6 +21,7 @@ def conversion_monedas_a_USD(m1,m2,m3):
     USD_peru=0.27
     c=m1*USD_colombia+m2*USD_brazil+m3*USD_peru
     return c
+
 # Contrar Movimiento Rectiliano Uniforme (Distancia)📏
 def encontrarMru(v,t):
     d=v*t
@@ -87,3 +90,15 @@ def decenas_unidades(num):
 # Limpiar Pantalla para todos los sistemas operativos
 def limpiarpantalla():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+# Función que encuentra el número máximo en una lista
+def econtrar_maximo(lista):
+    maximo= lista[0]
+    for numero in lista:
+        if numero > maximo:
+            maximo=numero
+    return maximo
+
+
+listanumeros=[20,5,6,18,1,6,2,3]
+print(f'El numero mayor es : {econtrar_maximo(listanumeros)}')
