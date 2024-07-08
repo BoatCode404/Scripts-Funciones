@@ -1,18 +1,7 @@
-#escribe un algoritmo que elimine los primeros N elementos de una lista. 
-import funciones
+#Escribe un algoritmo que elimine los primeros N elementos de una lista.
 
-lista=['julian',1,2,3,1.5,True,False]
-#! Primera Forma
+numeros=[numero for numero in range(1,21)]
 
-n=int(input(f"Cuantos elementos vas a eliminar en un rango de 1 a  {len(lista)} : "))
+N=5
 
-print(f"Lista con elementos eliminados : {lista[n:]}")
-
-#! Segunda Forma
-
-'''n=int(input(f"Cuantos elementos vas a eliminar en un rango de 1 a  {len(lista)} : "))
-
-del lista[:n]
-print(lista)'''
-
-print(funciones.eliminarElementos(lista))
+print(numeros[N:])

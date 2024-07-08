@@ -1,14 +1,10 @@
-# Escribe un algoritmo que calcule el producto de todos los elementos impares de una lista de números enteros.
-import funciones
+#Escribe un algoritmo que calcule el producto de todos los elementos impares de una lista de números enteros. 
 
-numeros=[]
-for i in range(1,20):
-    numeros.append(i)
+numeros=[numero for numero in range(1,20+1)]
 
-productoImpares=1
+productoNumero=1
 for numero in numeros:
-    if numero % 2 !=0:
-        productoImpares*=numero
-print(productoImpares)
+    if numero%2!=0:
+        productoNumero*=numero
 
-print(f'El producto de los elementos de la lista es : {funciones.prductoImpares(numeros)} ')
+print(productoNumero)
