@@ -1,0 +1,3 @@
+valor=None
+
+print(valor)
