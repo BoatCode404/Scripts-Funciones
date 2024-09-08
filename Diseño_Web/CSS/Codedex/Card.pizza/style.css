@@ -1,0 +1,35 @@
+body{
+    font-family: fantasy; /* Cambia la fuente de todo lo que este en bod */
+    width: 100%; /*  Body se ajusta al 100% del ancho de la ventana del navegador*/
+    height: 100vh; /* la ultura de body sera igual al 100% de la altura de la ventana del nevegador */
+    position: absolute; /* Coloca el cuerpo en una posición absoluta en relación con el elemento padre más cercano con una posición establecida */
+    text-align: center; /* Alinea horizontalmente el texto y otros elementos en el centro de la página.  */    
+}
+
+main{
+    background-color: tomato; /* Establece el color de fondo de main en un color rojo similar al de un tomate. */
+    width: 70%; /* : El ancho de main será el 70% del ancho de su contenedor padre (en este caso, el body). */
+    margin: auto; /* Aplica márgenes automáticos a los lados izquierdo y derecho, lo que centra el main */
+    position: relative; /* osiciona main de manera relativa. Esto significa que puede ser movido en relación a su posición normal, pero no sale del flujo del documento. */
+    border-radius: 5px; /* Aplica un borde con esquinas redondeadas de 5 píxeles a todo lo que este dentro de  main */
+    border-top: 50px;   /* Añade un espacio de 50 píxeles en la parte superior del main, separándolo del contenido superior. */
+} 
+
+#title{
+    padding: 5px;
+}
+
+figure , img {
+    width: 70%; /* Establece un ancho de la imagen que esta dentro de figure que ala ves este este dentro de title de un 70% */
+    border-radius: 10px; /* Aplica esquinas redondeadas de 10 píxeles a la imagen, lo que le da un aspecto más suave  */
+    margin: auto;
+}
+
+footer{
+    background-color: lightgray;
+    height: 100px;
+}
+
+footer p{
+    padding: 37px;
+}

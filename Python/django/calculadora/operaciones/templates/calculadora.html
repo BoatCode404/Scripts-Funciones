@@ -1,0 +1,67 @@
+
+{% load static %} 
+<!-- Carga la etiqueta 'static' para poder referenciar archivos estáticos como CSS o imágenes en Django -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadata básica de la página -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres para que el navegador interprete correctamente el texto -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para diseño responsivo -->
+    <meta name="description" content="Esta pagina se trata de una aplicacion de una calculadora basica"> <!-- Descripción de la página para motores de búsqueda -->
+    
+    <!-- Enlace al archivo CSS externo utilizando la etiqueta 'static' de Django -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <title>calculadora</title> <!-- Título que aparece en la pestaña del navegador -->
+</head>
+<body>
+    <main>
+        <!-- Sección principal que contiene el formulario -->
+        <section class="form-container">
+            <!-- Título principal de la aplicación -->
+            <header id="titulo-principal">Mi primera app con Django</header>
+            
+            <!-- Contenedor con borde alrededor del formulario -->
+            <div id="border-form">
+                <!-- Formulario que envía los datos mediante el método POST -->
+                <form method="post" class="formulario">
+                    {% csrf_token %} <!-- Token de seguridad requerido por Django para prevenir ataques CSRF -->
+                    
+                    <!-- Agrupación de los campos del formulario -->
+                    <fieldset>
+                        <legend id="titulo-form">Calculadora Simple</legend> <!-- Título del formulario -->
+                        
+                        <!-- Campo para ingresar el primer número -->
+                        <label for="numero1">Primer número</label>
+                        <input type="number" step="any" id="numero1" name="numero1" required placeholder="Digite el primer número" class="aling-input">
+                        
+                        <!-- Campo para ingresar el segundo número -->
+                        <label for="numero2">Segundo número</label>
+                        <input type="number" id="numero2" name="numero2" required placeholder="Digite el segundo número" class="aling-input">
+                        
+                        <!-- Menú desplegable para seleccionar la operación -->
+                        <label for="operacion">Operación</label>
+                        <select name="operacion" id="operacion">
+                            <option value="suma">Suma</option>
+                            <option value="resta">Resta</option>
+                            <option value="multiplicacion">Multiplicación</option>
+                            <option value="division">División</option>
+                        </select>
+                        
+                        <!-- Botón para enviar el formulario y realizar el cálculo -->
+                        <button type="submit" class="aling-input">Calcular</button>
+                    </fieldset>
+                </form>
+                
+                <!-- Sección para mostrar el resultado o los mensajes de error -->
+                {% if resultado is not None %}
+                    <p>Resultado: {{ resultado }}</p> <!-- Muestra el resultado si está disponible -->
+                {% elif error %}
+                    <p>{{ error }}</p> <!-- Muestra un mensaje de error si ocurre algún problema -->
+                {% endif %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

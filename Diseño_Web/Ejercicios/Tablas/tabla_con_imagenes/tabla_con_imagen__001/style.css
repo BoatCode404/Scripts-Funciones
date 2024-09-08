@@ -1,0 +1,56 @@
+/* Define el contenedor principal con un padding de 2rem */
+.principal {
+    padding: 2rem;
+}
+
+/* Estilo para el contenedor que contiene la imagen y el texto */
+.texto_img {
+    display: flex; /* Usar flexbox para organizar elementos en línea */
+    align-items: flex-start; /* Alinear elementos al inicio verticalmente */
+    gap: 1rem; /* Espacio entre los elementos */
+}
+
+/* Estilo para el contenedor que incluye el título y la imagen */
+.titulo_imagen {
+    display: flex; /* Usar flexbox para organizar elementos en columna */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+/* Estilo para el contenedor de texto */
+.texto {
+    width: 100%; /* El contenedor ocupa el 100% del ancho disponible */
+    max-width: 20rem; /* Máximo ancho del contenedor */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+    line-height: 1.5; /* Altura de línea */
+    padding: 1rem; /* Padding dentro del contenedor */
+    background-color: lavenderblush; /* Fondo de color lavenderblush */
+    text-align: center; /* Centrar el texto dentro del contenedor */
+}
+
+/* Estilo para el título "Datos" */
+.titulo_datos {
+    text-align: center; /* Asegura que "Datos" esté centrado */
+    margin-bottom: 1rem; /* Espacio debajo del título "Datos" */
+}
+
+/* Estilo para el contenedor que organiza los datos en dos columnas */
+.contenido_datos {
+    display: flex; /* Usar flexbox para organizar las columnas en línea */
+    justify-content: space-between; /* Espaciar las columnas equitativamente */
+    gap: 1rem; /* Espacio entre las columnas */
+}
+
+/* Estilo para los párrafos dentro de las columnas de subtítulos y datos */
+.sub p, .datos p {
+    margin-bottom: 0.8rem; /* Espacio debajo de cada párrafo */
+}
+
+/* Estilo para las imágenes */
+img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    max-width: 20rem; /* Máximo ancho de la imagen */
+    height: auto; /* Altura ajustada automáticamente según el ancho */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}

@@ -1,0 +1,36 @@
+@font-face { /* Esta es la manera correcta de instalar fuentes , creando otro archivo y configurando su negrilla con numeros (700-500-600) que representan bold, estra bold,light etc..*/
+    font-family: "Montserrat"; /* Este nombre puede ser cualquiera pero se recomienda el nombre de la fuente*/
+    src: url(../fonts/Montserrat-ExtraLight.ttf) format("truetype"); /* Hay que poner bien la ruta para que funcione*/
+    font-weight: 100; /* cuando le pongamos el tamaño a la letra en los estilos va poner la fuente extra light y asi con las otras*/
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf) format("truetype"); /* el format("truetype")sirve para que el navegador sepa que formato es la fuente ayuda mucho */
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-ExtraBold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Black.ttf) format("truetype");
+    font-weight: 900;
+}
+
+
+

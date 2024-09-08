@@ -1,0 +1,31 @@
+
+.container_titulos , .container_listas{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 50%;
+    max-width: 700px;
+    padding: 0 20px;
+    margin-right: auto;
+    align-items: flex-end;   
+}
+
+.container_titulos h3 , .container_listas ul{
+    flex: 1;
+    text-align: left;
+}
+
+.container_listas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container_listas li{
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.main_titulo{
+    margin-left: 30px;
+}

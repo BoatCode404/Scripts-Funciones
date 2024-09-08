@@ -1,0 +1,9 @@
+/*RGB este tiene 256 valores por cada color */
+/*RGBA canal alfa cuanto opacidad le damos al color*/
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #000080;
+    margin: 20px;
+}
+

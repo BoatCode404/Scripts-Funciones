@@ -1,0 +1,19 @@
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.catalogo{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.main   {
+    display: flex;
+}
+
+/* LAS IMAGENES TIENEN QUE SER DEL MISMO TAMAÑO PARA QUE NO SE DISTORCIONEN*/

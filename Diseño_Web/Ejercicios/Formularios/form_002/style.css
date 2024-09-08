@@ -1,0 +1,99 @@
+
+html{
+    font-size: 16px; /* la mayoria de los navegadores tiene predeterminado 16px de fuente */
+}
+
+body{
+    font-family: Arial,sans-serif; /* cambia la fuente de todo lo que este dentro de body  */
+    margin: 0; /* Se eliminan los márgenes y el relleno predeterminados del cuerpo para evitar espacios innecesarios alrededor del contenido. */
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex; /* hace que los elementos dentro de body sean flexibles es decir se puedan manipular mas facil asi como manipulamos los textos o algo asi  */
+    flex-direction: column;/* por ejemplo esta funcion es de display flex quiere decir que todos los elementos flexibles tengan una doreccion en columnas  */
+    min-height: 100vh; /* Hace que el cuerpo tenga al menos la altura de la ventana */
+
+}
+
+#nombre,#email,#mensaje{
+    width: 100%; /* width: 100%: Los campos de entrada ocupan todo el ancho del contenedor. */
+    padding: 0.625rem; /* padding: Se añade un relleno interno de 10px alrededor del contenido. */
+    margin-bottom: 1rem; /* margin-bottom: Se añade un margen inferior de 16px para separar los campos de entrada entre sí. */
+    border:  1px solid #ddd; /* border: Los campos tienen un borde de 1px de grosor y color gris claro #ddd. */
+    border-radius: 0.25rem; /* border-radius: Las esquinas de los campos de entrada están redondeadas con un radio de 4px. */
+    font-size: 1rem;
+}
+
+
+main{
+    display: flex; /* esto hace que todo lo que este dentro del contendor sea flexible lo que permite con */
+    justify-content: center; /* justify-content: center centra el contenido dentro del contenedor main horizontalmente, haciendo que el formulario se ubique en el centro de la página. */
+    padding: 2rem; /* ñade un relleno de 2rem (32px) alrededor del contenido dentro de main. */
+}
+
+
+.form-container{
+    width: 90%; /* El contenedor ocupa el 90% del ancho disponible, lo que permite que se ajuste a diferentes tamaños de pantalla. */
+    max-width: 37.5rem; /* El ancho máximo del contenedor es de 600px (37.5rem). Esto evita que el contenedor se extienda demasiado en pantallas grandes. */
+    padding: 1.25rem; /* Añade un relleno interno de 20px alrededor del contenido del formulario. */
+    background-color: #fff;
+    border-radius: 0.5rem ; /* Las esquinas del formulario están redondeadas con un radio de 8px. */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.6); /*  Aplica una sombra sutil alrededor del formulario para darle un efecto de elevación. */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+fieldset{
+    border: 1px #ddd; /* border: El borde del fieldset es una línea de 1px de grosor y color gris claro #ddd. */
+    border-radius: 0.5rem ; /* border-radius: Las esquinas del fieldset están redondeadas con un radio de 8px. */
+    padding: 1rem; /* padding: Añade 16px de relleno interno. */
+    margin-bottom: 1rem; /* margin-bottom: Añade un margen inferior de 16px para separar el fieldset de los elementos siguientes. */
+}
+
+legend{
+    font-size: 1.25rem; /* font-size: El tamaño de la fuente del legend es 18px. */
+    font-weight: bold;  /* font-weight: bold: El texto del legend es negrita  */
+}
+
+
+
+label{
+    margin: 0.5rem 0 0.25rem; /* margin: Se establece un margen superior de 8px y un margen inferior de 4px para separar las etiquetas de otros elementos. */
+    color: #555; /* color: El color del texto es un gris medio #555. */
+}
+
+
+
+#mensaje{
+    resize: vertical; /* resize: vertical: Permite que el área de texto se pueda redimensionar solo verticalmente. */
+}
+
+
+button{
+    padding: 0.625rem 1.25rem; /* padding: El botón tiene un relleno de 10px arriba y abajo, y 20px a los lados. */
+    background-color: #28a745; /* background-color: El color de fondo del botón es verde #28a745. */
+    color: #fff; /* color: El texto del botón es blanco.    */
+    border: none; /* border: El botón no tiene borde visible.    */
+    border-radius: 0.25rem; /* las esquinas del boton estan redondeadas 4px */
+    cursor: pointer; /* cursor: Cambia el cursor a una mano cuando se pasa por encima del botón, indicando que es clicable. */
+    font-size: 1rem;
+    transition: background-color 0.1s ease; /* transition: Se aplica una transición suave de 0.3 segundos al cambiar el color de fondo. */
+}
+
+
+button:hover{
+    background-color: #218838;
+}
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}

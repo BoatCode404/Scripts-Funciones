@@ -1,0 +1,24 @@
+
+body{
+    margin: 0;  /* ponemos esto para que no interfiera */
+}
+
+.box{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin:  10px;
+}
+
+.box_one{
+    box-sizing: border-box; /* esto no modifica el tamaño de la caja , conserva el tamaño que le dejamos*/
+    padding: 25px;
+    border: 10px solid black;
+}
+
+.box_two{
+    box-sizing: border-box;
+    padding: 25px;
+    border: 10px solid black;
+}
+

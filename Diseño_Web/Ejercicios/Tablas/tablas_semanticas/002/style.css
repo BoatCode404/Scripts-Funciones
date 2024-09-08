@@ -1,0 +1,28 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    margin-top: 2rem;
+    border-spacing:  1rem; /* Si deseas aplicar la misma cantidad de espacio tanto horizontal como verticalmente, puedes usar un solo valor: */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+td,th{
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #555;
+}
+
+caption{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+

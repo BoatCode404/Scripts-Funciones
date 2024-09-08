@@ -1,0 +1,11 @@
+.container_listas{
+    display: flex;
+    align-items: flex-end;
+}
+
+.container_listas ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left:  10px;
+    margin-right: 10px;
+}

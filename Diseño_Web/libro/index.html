@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Esto es un ejemplo de un documento HTML basico ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header> <!-- se usa para estblecer un titulo  -->
+        <img src="Banner.png" alt="">
+        <h1 style="display: none;"> Esto es un titulo escondido </h1>
+    </header>    
+    <nav> 
+        <details>
+            <summary> Esto es una lista desplegable con vinculos </summary>
+            <ol>
+                <li><a href="">Pagina 1-inicio</a></li>
+                <li><a href="">Pagina 2-Quienes somos</a></li>
+                <li><a href="">Pagina 3-Productos</a></li>
+            </ol>
+        </details>
+    </nav>
+    <section>
+        <article>
+            <header>
+                <hgroup>
+                    <h1 contenteditable="true" spellcheck="false"> Titulo de la paguinaina 1</h1> 
+                    <h2 draggable="true">subtitulo de la pagina 1</h2>
+                <h/group>
+                <p>Publicado el <time datetime="2024-08-29" pubdate>29 de agosto</time></p>
+                <p> Esto es una breve sipnosis que abarca informacion de lo que viene acontinuacion en el otro parrafo</p>
+            </header>
+            <p>Elemento parrafo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quam voluptas blanditiis nesciunt temporibus. Voluptate debitis impedit doloremque itaque alias velit. Incidunt ducimus facilis nam eligendi consequuntur, quasi asperiores maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis atque, est facere eos consequatur, impedit quaerat similique assumenda tenetur dolor doloremque, deserunt aperiam unde vero magnam explicabo ab numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt earum quaerat unde blanditiis. Tenetur commodi facilis, nobis impedit eos deleniti ratione ipsum, sint, reprehenderit maxime temporibus ducimus minus. Esse, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam numquam, pariatur error tempore iure libero qui quis sunt! Nisi, quia similique minus nesciunt ex eius sit inventore consequuntur ullam?</p>
+                <figure>
+                <img id="mariposa1"src="Mariposa1.jpg" alt="Logo cuadrado de mariposa" data-tecnica="Ilustracion" data-aplicacion="ilustrator" data-autor="Abril Lopez">
+                <img src="Verano.jpg" alt="Ilustracion de campo">
+                <figcaption>Multicolor</figcaption>
+            </figure>
+            <p><dfn>Palabra desconocida:</dfn>1.R/ Defincion de la palabra desconocida</p>
+        </article>
+        <article>
+            <header>
+                <hgroup> <!-- agrupa los titulos dentro  -->
+                    <h1> Titulo de la pagina 2</h1>
+                    <h2>subtitulo de la pagina 2</h2>
+            </hgroup>
+                <p>Elemento parrafo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quam voluptas blanditiis nesciunt temporibus. Voluptate debitis impedit doloremque itaque alias velit. Incidunt ducimus facilis nam eligendi consequuntur, quasi asperiores maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis atque, est facere eos consequatur, impedit quaerat similique assumenda tenetur dolor doloremque, deserunt aperiam unde vero magnam explicabo ab numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt earum quaerat unde blanditiis. Tenetur commodi facilis, nobis impedit eos deleniti ratione ipsum, sint, reprehenderit maxime temporibus ducimus minus. Esse, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam numquam, pariatur error tempore iure libero qui quis sunt! Nisi, quia similique minus nesciunt ex eius sit inventore consequuntur ullam?</p>                
+                <figure>
+                    <blockquote> <!-- se usa para crear citas en la pagina web  -->
+                        "Siempre imaginese que el paraiso seria algun tipo de biblioteca"
+                    </blockquote>
+                    <figcaption>Jorge luis borja</figcaption>
+                </figure>
+            </article>
+    </section>
+    <aside>
+        <nav> <!-- se usa para crear lista de vinculos  -->
+            <h2>Elemento nav,"Categorias"</h2>
+            <ul>
+                <li><a href="http://www.mediaactive.es/" ping="http://www.mediaactive.es/control.php" download>Categoria 1</a></li>
+                <li><a href="">Categoria 2</a></li>
+                <li><a href="">Categoria 3</a></li>
+                <li><a href="">Categoria 4</a></li>
+            </ul>
+            <section id="reproductor">
+                <audio controls autoplay loop>
+                    <source src="campanas.ogg">
+                    <source src="campanas.mp3">
+                </audio>
+            </section>
+            <section id="video">
+                <video controls width="400" height="300" poster="biciPoster.jpg">
+                    <source src="bici.ogg" >
+                    <source src="bici.mov">
+                </video>
+            </section>
+        </nav>  
+    </aside>
+    <footer>
+        <h2> Footer </h2>
+        &copy;2024
+        <address>
+            Nombre de Autor <a href="juliansito@hotmail.com">:Correo Electronico</a>
+        </address>
+    </footer> 
+</body>
+</html>

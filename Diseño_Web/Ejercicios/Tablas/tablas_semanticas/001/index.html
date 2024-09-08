@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabla de turnos semanales">
+    <title>Turnos semanales </title>
+</head>
+<body>
+    <table>
+        <caption><!-- Representa el titulo de la tabala -->
+            Turnos semanales
+        </caption>
+        <thead> <!-- Representa los encabezados de la tabla -->
+            <tr>
+                <th scope="col">Dia</th> <!-- "th" define una celda de encabezado en una tabla , el titulo de las columnas -->
+                <th scope="col">Mañana</th> <!-- scope="col" le dice al navegador que este encabezado (<th>) está asociado con todas las celdas de la columna debajo de él. Esto significa que el encabezado "Dia" se aplica a todas las celdas de la misma columna en la tabla. -->
+                <th scope="col">Tarde</th>
+            </tr>
+        </thead>
+        <tfoot> <!-- se utiliza para agrupar información de resumen al final de la tabla.
+            Aunque se visualiza al final de la tabla, en el código HTML se coloca antes de <tbody>. -->
+            <tr>
+                <td colspan="3">Total de empleados:6</td> <!-- : Aunque semánticamente el pie está al final de la tabla, en el código HTML, se recomienda colocarlo antes de <tbody>. Los navegadores lo renderizan correctamente, y mejora la eficiencia de carga para tablas grandes. -->
+            </tr> <!-- En el ejemplo, he utilizado colspan="3" en la celda del pie de la tabla para que ocupe el ancho de todas las columnas. Esto es común cuando estás mostrando información que se aplica a toda la tabla, como un total o resumen. -->
+        </tfoot>
+        <tbody><!-- Contiene el cuerpo de la tabla , es decir , las filas con los datos  -->
+            <tr> <!-- "Tr" agrupua encabezado o agrupa filas de datos   -->
+                <td>Lunes</td> <!-- El "td" representa los datos en una tabla , lo que va debajo de los encabezados  -->
+                <td>Juan</td>
+                <td>Pedro</td>
+            </tr>
+            <tr>
+                <td>Martes</td>
+                <td>Luisa</td>
+                <td>Maria</td>
+            </tr>
+            <tr>
+                <td>Miercoles</td>
+                <td>Andres</td>
+                <td>Juan</td>
+            </tr>
+            <tr>
+                <td>Jueves</td>
+                <td>Maria</td>
+                <td>Luisa</td>
+            </tr>
+            <tr>
+                <td>Viernes</td>
+                <td>Pedro</td>
+                <td>Andres</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

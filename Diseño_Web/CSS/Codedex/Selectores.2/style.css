@@ -1,0 +1,22 @@
+.listas{
+    border: 1px solid;
+    width: 200px;
+}
+
+#desorder_list{
+    background-color: lightgreen;
+}
+
+#order_list{
+    background-color: skyblue;
+    color: white;
+}
+
+#desorder_list > li{
+    text-decoration: underline wavy 1px brown;
+}
+
+#order_list > li{
+    text-decoration: underline dotted 1px indigo;
+}
+

@@ -1,0 +1,36 @@
+<!-- cuando estableces el ancho con un % (widht:50%) Estás diciendo que el ancho del elemento será el 50% del ancho de su elemento padre. Las unidades en porcentaje dependen del tamaño del contenedor en el que el elemento está contenido. Esto significa que si el contenedor principal cambia de tamaño, el ancho del elemento también cambiará proporcionalmente. -->
+
+<!-- Ejemplo:
+Si el contenedor tiene un ancho de 400 píxeles, entonces width: 50%; hará que el elemento sea de 200 píxeles de ancho (el 50% de 400 píxeles). Si el contenedor cambia a 600 píxeles de ancho, el elemento automáticamente cambiará a 300 píxeles de ancho. -->
+
+<!-- em: Unidad Relativa al Elemento Padre
+La unidad em es relativa al tamaño de la fuente del elemento padre o del propio elemento, dependiendo de la propiedad CSS que estés utilizando.
+
+Ejemplo Básico:
+Si tienes un elemento con un tamaño de fuente definido, y luego dentro de ese elemento usas em para definir propiedades de estilo (como font-size, padding, margin o width), esas propiedades serán relativas al tamaño de la fuente del elemento padre.
+
+Supongamos que tienes un div con un tamaño de fuente de 16 píxeles:
+
+<div style="font-size: 16px;">
+    <p style="font-size: 2em;">Este párrafo tiene un tamaño de fuente de 2em.</p>
+</div>
+
+Aquí, el tamaño de fuente del párrafo será 2 veces el tamaño de fuente del div padre.
+Como el div tiene un tamaño de fuente de 16 píxeles, el párrafo tendrá un tamaño de fuente de 32 píxeles (2 * 16px = 32px). -->
+
+<!-- Importante: Cascada de em
+El em se hereda, lo que significa que si tienes varios elementos anidados y cada uno tiene un tamaño de fuente definido en em, el tamaño se va multiplicando.
+
+Por ejemplo:
+
+<div style="font-size: 16px;">
+    <div style="font-size: 1.5em;">
+        <p style="font-size: 1.5em;">Este párrafo está dentro de dos divs.</p>
+    </div>
+</div>
+
+Aquí pasa lo siguiente:
+
+El div más exterior tiene un tamaño de fuente de 16 píxeles.
+El div interno tiene un tamaño de fuente de 1.5em, lo que significa que su tamaño de fuente es 1.5 veces el de su elemento padre (16px * 1.5 = 24px).
+El párrafo dentro de ese div tiene un tamaño de fuente de 1.5em, lo que significa que será 1.5 veces el tamaño de fuente del div padre (24px * 1.5 = 36px). -->

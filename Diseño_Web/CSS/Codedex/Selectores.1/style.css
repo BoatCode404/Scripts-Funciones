@@ -1,0 +1,36 @@
+
+p#descrip{ /* A esto se le llama selector */
+    color: yellowgreen; /* color de la funte */
+    font-size: 20px; /* tamaño de la fuente  */
+}
+
+/* seleccionar elementos especificos con un id # */
+h1#title{ /* esto significa que todos los titulos que tienen un id="title" van a tener estos estilos */
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif; /* esto seleccciona la fuente de la letra  */
+}
+
+
+/* estilos para todo los elementos que esten dentro de div  */
+div{
+    background-color:white; /* agregar un color al contenedor de div */
+    border: 1px; /* agregar bordes redondos de 1px al contenedor de div que esta dentro de body */
+    text-align: center; /* alinea todo los textos en el centro o en una direccion especifica que esten dentro del contenedor de div */
+}
+
+p.linea{
+    width: 50%; /* establece un tamaño de un 50% de todos los parrafos con la clase linea que estan dentro de div este tamaño es referente al padre es decir utilizan un 50% del contenedor de div */
+    margin: auto; /* esto establece todas las margenes automaticas de todos los p que tengan clase de linea  dentro del contenedor de div  */
+    padding: 10px 0; /* padding es el relleno dentro de un elemento en este caso dentro de div , es el espacio entre el contenido del elemento y su borde el elemento es el contendor 10px de espacio en la parte superior e inferior y 0 de espacio en los lados izquierdos y derecho del elemento cuando se pone 0 no es necesario poner el signo arigmetico (%,px,rem,etc..)*/
+    text-decoration: underline; /* agrega un subrayado  */
+}
+
+p#rosa{
+    background-color: red;
+}
+p#violeta{
+    background-color: violet;
+}
+p#azucar{
+    background-color: beige;
+}

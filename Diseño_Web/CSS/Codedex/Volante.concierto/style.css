@@ -1,0 +1,28 @@
+#imagen_principal{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+#noche_2{
+    text-align: right;
+}
+
+body{
+    background: linear-gradient(skyblue,green) no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main,header,footer{
+    width: 70%;
+    margin: auto;
+}
+
+footer,header{
+    text-align: center;
+}
+
+

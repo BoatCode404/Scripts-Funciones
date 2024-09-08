@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Primeros pasos en HTML </title>
+</head>
+
+<body>
+    <h1> Conceptos basicos en HTML </h1>
+    <p>
+        Este espacio esta diseñado para abordar todo lo aprendido hasta ahora
+        veremos lo conceptos en clase y en codedex curse.veremos los tipos de etiqueta para irganizar nuestros textos <br>
+        <br> Es importante recordar que en un sitio web solo se debe usar una etiqueta &lt;h1&gt; 
+    </p>
+
+    <h3> <br> Etiquetas basicas</h3>
+    
+    <p> Tenemos varias etiquetas importantes que nos sirven para modificar nuestro texto,<br>
+        Podemos hacer que nuestro texto se vea en negriilla , cursiva , subrayada , tachada et... <br> <br>
+       Para poner un texto en  <b>negrilla</b> usamos la etiqueta &lt; b &gt; de la siguiente manera <br> Ejemplo:
+        <b> Esto es un texto en negrilla usado con &lt; b &gt; </b>
+    </p>
+    <p>Para poner un texto en <i>cursiva</i> usamos la etiqueta &lt; i &gt; de la siguiente manera.<br>Ejemplo:
+        <i>Esto es un texto en cursiva usada con &lt;i&gt;</i>
+    </p>
+    <p>Para poner un texto en <u>subrayado</u> usamos la etiqueta &lt;u&gt; de la siguiente manera. <br>Ejemplo:
+        <u>Esto es un texto subrayado con &lt;u&gt; </u> 
+    </p>
+    <p>Para <s>tachar</s> un texto usamos la etiqueta &lt;s&gt; de la siguiente manera <br> Ejemplo:
+        <s> Esto es un texto tachado con &lt;s&gt; </s>
+    </p>
+
+    <h3> <br> Listas Ordenadas </h3>
+    <p> Para crear una lista ordenada tenemos que usar una etiqueta de apertura  &lt;ol&gt; y para ingresar los items debemos usar una etiqueta &lt;li&gt; se puede modificar el tipo para que sea numerico , con vocales y numeros romanos <br> Ejemplo:
+        <ol type="A"> <!-- Podemos modificar el tipo -->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+        <ol type="I"> <!-- Podemos modificar el tipo -->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+    </p>
+    <h3> <br> Listas Desordenadas </h3>
+    <p> Para crear una lista desordenada tenemos que usar una etiqueta de apertura  &lt;ul&gt; y para ingresar los items debemos usar una etiqueta &lt;li&gt; se puede modficar el tipo para cambiar la forma a la viñeta <br> Ejemplo:
+        <ul type="circle"> <!-- Podemos modificar el tipo -->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ul type="square"> <!-- Podemos modificar el tipo -->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ul type="disc"> <!-- Podemos modificar el tipo -->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </p>
+    <h3> Funciones Basicas </h3>
+    <p> Para crear una abreviatura de un termino en especifico debemos usar la etiqueta &lt;abbr&gt; de la siguiente manera <br> Ejemplo: 
+        <abbr title="HTML">Es un lenguaje marcado de Hipertexto (HTML)</abbr>      
+    </p>
+    <p>Existe una etiqueta que nos sirve para hacer un insertado de texto , hay que tener en cuenta que parece un texto subrayado pero es totalmente diferente . <br> La etiqueta que vamos usar es &lt; ins &gt; <br> Ejemplo:
+        <ins> Esto es un texto insertado </ins>
+    </p>
+    <p>Para cambiar de direccion las letras del texto usamos la etiqueta &lt;bdo&gt; de la siguinte manera <br> Ejemplo:
+        <bdo dir="rtl">Esto es texto modificado</bdo>
+    </p>
+    <p> Para resaltar un texto vamos a usar la etiqueta &lt;mark&gt; de la siguiente manera <br>
+        <mark id="important" style="background-color: rgb(21, 211, 129);" style="color: blue;">
+            esto es un texto resaltado
+        </mark>
+    </p>
+    <p> Para poner un texto <small> pequeño </small> usamos la etiqueta &lt;small&gt; y para un texto <big> grande </big> usamos la etiqueta &lt;big&gt; . De esta manera <br> Ejemplo:
+        <small> Esto es un texto pequeño con &lt;small&gt; </small> <br>
+        <big> Esto es un texto grande con &lt;big&gt;</big>
+    </p>
+    <h3> Animaciones de texto </h3>
+    <p> se puede hacer una animacion de texto con la etiqueta &lt;marquee&gt; de esta manera <br> Ejemplo:
+        <marquee behavior="alternate" direction="2">ESTO ES UN TEXTO ANIMADO</marquee>
+    </p> 
+
+    <style>
+        .color-change {
+            animation: color-change 5s infinite;
+        }
+    
+        @keyframes color-change {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: purple; }
+            100% { color: red; }
+        }
+    </style>
+    
+    <p class="color-change">Este texto cambia de color</p>
+    
+
+</body>
+
+</html>

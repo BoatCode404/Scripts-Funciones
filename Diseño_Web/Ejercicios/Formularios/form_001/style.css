@@ -1,0 +1,46 @@
+
+body{
+    background-color: black;
+    font-family: lexend;
+}
+
+div{
+    background-color: greenyellow;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 2px;
+    color: black;
+}
+
+.formulario{
+    background-color: None;
+    padding: 30px;
+}
+
+.formulario_input{
+    padding: 9px 12px;
+    width: 90%;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 10px;
+    border-top: none;
+    border-bottom: 1px solid greenyellow;
+    border-left: none;
+    border-right: none;
+    color: greenyellow;
+}
+
+.formulario_enviar{
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 50%;
+    margin-top: 15px;
+    border-bottom: 1x solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;   
+}
